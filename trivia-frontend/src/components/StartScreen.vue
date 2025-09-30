@@ -4,6 +4,7 @@ import { fetchQuestions } from '../helpers/api';
 import { getOrCreateSessionId } from '../helpers/session';
 import Button from "primevue/button"
 import Select from 'primevue/select';
+import InputNumber from 'primevue/inputnumber';
 import { useToast } from 'primevue/usetoast';
 
 
@@ -49,7 +50,7 @@ async function startQuiz() {
         </div>
         <div class="amount-select">
             <label>Aantal vragen: </label>
-            <Select v-model="amount" :options="[10, 20, 30, 40, 50]" />
+            <InputNumber v-model="amount" inputId="minmax-buttons" mode="decimal" showButtons :min="1" :max="50" />
         </div>
         <div class="difficulty-select">
             <label>Moeilijkheid: </label>
