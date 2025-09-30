@@ -1,4 +1,4 @@
-package trivia_backend.trivia_backend.dto.response;
+package trivia_backend.trivia_backend.dto;
 
 import trivia_backend.trivia_backend.model.AnswerResult;
 

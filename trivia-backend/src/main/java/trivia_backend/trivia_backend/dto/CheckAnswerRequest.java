@@ -1,4 +1,4 @@
-package trivia_backend.trivia_backend.dto.request;
+package trivia_backend.trivia_backend.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import trivia_backend.trivia_backend.model.Answer;

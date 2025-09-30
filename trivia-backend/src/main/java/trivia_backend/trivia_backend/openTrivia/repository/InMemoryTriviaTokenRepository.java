@@ -1,4 +1,4 @@
-package trivia_backend.trivia_backend.openTrivia;
+package trivia_backend.trivia_backend.openTrivia.repository;
 
 import org.springframework.stereotype.Repository;
 
