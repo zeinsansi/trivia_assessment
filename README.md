@@ -52,8 +52,6 @@ git clone https://github.com/zeinsansi/trivia_assessment.git
 cd trivia_assessment
 ```
 
-## Backend Setup (Spring Boot)
-
 Navigate to the backend folder:
 ```bash
 cd trivia-backend
@@ -64,29 +62,7 @@ Build and run the backend:
 mvn spring-boot:run
 ```
 
-The backend will run on: `http://localhost:8080`
-
-## Frontend Setup (Vue.js)
-
-Navigate to the frontend folder:
-```bash
-cd trivia-frontend
-```
-
-Install dependencies:
-```bash
-npm install
-```
-
-Start the dev server:
-```bash
-npm run dev
-```
-
-Open your browser at: `http://localhost:5173`
-
-The frontend expects the backend to be running on `http://localhost:8080`
-If your backend runs on a different URL, update the API base URL in `trivia-frontend/src/helpers/api.js`.
+Open your browser at: `http://localhost:8080`
 
 ## Testing
 To run the tests, use the following command in the backend folder:
