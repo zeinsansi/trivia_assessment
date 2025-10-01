@@ -2,6 +2,8 @@
 A simple full-stack web application that lets users test their knowledge with questions from the [Open Trivia Database](https://opentdb.com/).  
 The application is built with **Vue.js + Vite** for the frontend and **Java 21 + Spring Boot** for the backend.
 
+ Hosted version: [Quad Trivia](https://zein.up.railway.app/).
+
 # Screenshot
 Start page
 
