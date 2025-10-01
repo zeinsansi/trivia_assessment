@@ -20,6 +20,10 @@ public class QuestionController {
         this.service = service;
     }
 
+    @GetMapping("")
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("Trivia API is running");
+    }
 
     @GetMapping("/questions")
     public ResponseEntity<List<Question>> getQuestions(
