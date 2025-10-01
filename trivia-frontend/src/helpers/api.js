@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'https://zeintrivia.up.railway.app/api';
 
 export async function fetchQuestions(amount, category, difficulty, sessionId) {
   let url = `${API_BASE_URL}/questions?amount=${amount}&difficulty=${difficulty}`;
