@@ -4,7 +4,6 @@ import Button from 'primevue/button';
 const props = defineProps({
     results: Object,
 });
-console.log(props.results);
 </script>
 
 <template>

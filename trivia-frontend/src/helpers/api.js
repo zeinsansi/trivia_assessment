@@ -12,7 +12,6 @@ export async function fetchQuestions(amount, category, difficulty, sessionId) {
     },
   });
   if (!response.ok) {
-    console.log('API response error:', response);
     throw new Error(response.statusText);
   }
   const data = await response.json();
@@ -21,7 +20,6 @@ export async function fetchQuestions(amount, category, difficulty, sessionId) {
 }
 
 export async function checkAnswers(answers) {
-  console.log('Checking answers:', answers);
   const response = await fetch(`${API_BASE_URL}/checkanswers`, {
     method: 'POST',
     headers: {
