@@ -26,23 +26,17 @@ public class QuestionService {
     }
 
     public List<Question> getQuestions(int amount, Integer category, String difficulty, String sessionId) {
-        try {
-            // Fetch questions from Open Trivia API
-            OpenTriviaResponse apiResponse = openTriviaService.fetchQuestions(amount, category , difficulty, sessionId);
-            List<OpenTriviaQuestion> apiQuestions = apiResponse.getQuestions();
-
-            List<Question> questions = new ArrayList<>();
-            answerRepository.clear();
-
-            for (OpenTriviaQuestion item : apiQuestions) {
-                Question question = item.toQuestion(item);
-                answerRepository.save(question.getId(), item.getCorrectAnswer(), question.getQuestion());
-                questions.add(question);
-            }
-            return questions;
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to fetch questions");
+        // Fetch questions from Open Trivia API
+        OpenTriviaResponse apiResponse = openTriviaService.fetchQuestions(amount, category , difficulty, sessionId);
+        List<OpenTriviaQuestion> apiQuestions = apiResponse.getQuestions();
+        List<Question> questions = new ArrayList<>();
+        answerRepository.clear();
+        for (OpenTriviaQuestion item : apiQuestions) {
+            Question question = item.toQuestion(item);
+            answerRepository.save(question.getId(), item.getCorrectAnswer(), question.getQuestion());
+            questions.add(question);
         }
+        return questions;
     }
 
     public CheckAnswerResponse checkAnswers(CheckAnswerRequest request) {

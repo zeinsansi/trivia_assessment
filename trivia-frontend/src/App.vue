@@ -50,4 +50,16 @@ body {
   background-color: #271c36;
   color: white;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+  body {
+    padding: 0 1rem;
+  }
+}
 </style>

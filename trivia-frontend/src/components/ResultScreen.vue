@@ -61,4 +61,18 @@ const props = defineProps({
     margin-top: 1rem;
     width: 100%;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .result-screen {
+        width: 95%;
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
+    
+    .result-item {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
 </style>
