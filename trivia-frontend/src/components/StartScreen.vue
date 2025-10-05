@@ -36,9 +36,10 @@ async function startQuiz() {
         const response = await fetchQuestions(amount.value, category.value, difficulty.value, sessionId.value);
         emit("start", response);
     } catch (error) {
-        toast.add({ severity: 'error', summary: 'Error', detail: 'Failed to get questions', life: 3000 });
+        toast.add({ severity: 'error', summary: 'Error', detail: error.message, life: 3000 });
     }
 }
+
 </script>
 
 <template>
@@ -78,5 +79,14 @@ async function startQuiz() {
 .select-button {
     margin-top: 1rem;
     width: 100%;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .start-screen {
+        width: 95%;
+        margin: 1rem auto;
+        padding: 1.5rem;
+    }
 }
 </style>

@@ -11,10 +11,10 @@ export async function fetchQuestions(amount, category, difficulty, sessionId) {
       'sessionId': sessionId,
     },
   });
-  if (!response.ok) {
-    throw new Error(response.statusText);
-  }
   const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || 'Unknown error occurred while fetching questions');
+  }
   return data;
 
 }
@@ -27,8 +27,9 @@ export async function checkAnswers(answers) {
     },
     body: JSON.stringify({ answers }),
   });
+  const data = await response.json();
   if (!response.ok) {
-    throw new Error('Error checking answers');
+    throw new Error(data.message || 'Unknown error occurred while checking answers');
   }
-  return response.json();
+  return data;
 }

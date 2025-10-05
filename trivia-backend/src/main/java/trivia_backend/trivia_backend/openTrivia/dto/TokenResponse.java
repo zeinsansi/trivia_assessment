@@ -1,20 +1,17 @@
 package trivia_backend.trivia_backend.openTrivia.dto;
 
-import lombok.Data;
 
-@Data
 public class TokenResponse {
     int responseCode;
     String token;
     String responseMessage;
 
-    public int getResponseCode() {
-        return responseCode;
+    public TokenResponse(int responseCode, String newToken) {
+        this.responseCode = responseCode;
+        this.token = newToken;
     }
-    public String getToken() {
-        return token;
-    }
-    public String getResponseMessage() {
-        return responseMessage;
-    }
+
+    public String getToken() { return token;}
+    public int getResponseCode() { return responseCode; }
+    public String getResponseMessage() { return responseMessage; }
 }

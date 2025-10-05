@@ -26,6 +26,11 @@ public class InMemoryTriviaTokenRepository implements TriviaTokenRepository {
     }
 
     @Override
+    public void deleteToken(String sessionId) {
+        tokens.remove(sessionId);
+    }
+
+    @Override
     public void clear() {
 
     }
